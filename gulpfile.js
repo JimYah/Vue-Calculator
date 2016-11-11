@@ -3,6 +3,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
+var ghPages = require('gulp-gh-pages');
 
 gulp.task('concat', function(){
   return gulp.src('./source/js/**/*.js')
@@ -37,5 +38,10 @@ gulp.task('watch', function(){
   gulp.watch('./source/js/**/*.js', ['concat'])
   gulp.watch('./source/scss/**/*.scss', ['sass'])
 })
+
+gulp.task('deploy', function() {
+  return gulp.src('./public/**/*')
+    .pipe(ghPages());
+});
 
 gulp.task('default',['concat', 'sass','vendor', 'watch'])
