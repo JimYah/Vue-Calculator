@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Calculator</title>
+  <link rel="stylesheet" href="stylesheets/all.css">
+</head>
+<body>
+
+  <div id="app">
+    <div class="calculator">
+      <h1>Vue Calculator</h1>
+      <input class="textbox" readonly="readonly" value v-model="result">
+      <div class="buttons clearfix">
+        <button @click="rest()"> AC </button>
+        <button @click="del()"> Del </button>
+        <button @click="btnOper('%')"> % </button>
+        <button @click="btnOper('/')"> / </button>
+        <button @click="btnClick('7')"> 7 </button>
+        <button @click="btnClick('8')"> 8 </button>
+        <button @click="btnClick('9')"> 9 </button>
+        <button @click="btnOper('*')"> * </button>
+        <button @click="btnClick('4')"> 4 </button>
+        <button @click="btnClick('5')"> 5 </button>
+        <button @click="btnClick('6')"> 6 </button>
+        <button @click="btnOper('-')"> - </button>
+        <button @click="btnClick('1')"> 1 </button>
+        <button @click="btnClick('2')"> 2 </button>
+        <button @click="btnClick('3')"> 3 </button>
+        <button @click="btnOper('+')"> + </button>
+        <button @click="btnClick('.')"> . </button>
+        <button @click="btnClick('0')"> 0 </button>
+        <button @click="last('Ans')"> Ans </button>
+        <button @click="equal()"> = </button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="javascript/vendor.js"></script>
+  <script src="javascript/all.js"></script>
+</body>
+</html>
