@@ -1,6 +1,7 @@
 
+window.Vue = require('vue')
 
-var vm = new Vue({
+const vm = new Vue({
   el: '#app',
   data: {
     result: 0,
